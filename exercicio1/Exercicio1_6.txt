@@ -1,0 +1,4 @@
+A diferença do exercicio 3 para os exercícios 4 e 5 é que os resultados não tiveram numero com vírgula, 
+já que as variáveis eram int.
+Os resultados 4 e 5 tiveram número depois da vírgula já que eram float e double, mas, nos exercícios, 
+houve diferença nos resultados deles.
