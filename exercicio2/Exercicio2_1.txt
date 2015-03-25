@@ -1,0 +1,6 @@
+- Tipo Abstrato de Dados (TAD) é uma abstração de informações que podem ser encapsuladas e manipuladas através de operações.
+- Classe é um tipo de TAD, além de ser um conceito estático. Apresenta um conjunto de atributos/variáveis e 
+operações/métodos.
+- Objeto é a instância ou materialização de uma classe. O objeto, diferentemente da classe, é um conceito dinâmico 
+e são alocados na memória.
+- Mensagens são a comunicação entre objetos através de parâmtros.
