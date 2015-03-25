@@ -1,0 +1,1 @@
+Quando a palavra chave new é utilizada em um aplicativo, um novo objeto é instanciado dentro da classe.
