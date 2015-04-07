@@ -5,6 +5,7 @@ public class NumeroMuitoGrande{
     public int[] vetor1=new int [30];
     public int[] vetor2=new int [30];
     public int[] respsoma=new int [30];
+    public int [] respmulti=new int [30];
     String n1, n2;
     
     public void leNumero(){
@@ -47,11 +48,11 @@ public class NumeroMuitoGrande{
             }
 	        if (vai==1){
 	            vai=0;
-		        respsoma[i-1]=1;
+		    respsoma[i-1]=1;
 	        }
 	    }
         int flag=0;
-        System.out.println("Soma: ");
+        System.out.print("Soma: ");
         for (int i=0;i<=29;i++){
 	        if (respsoma[i]==0 && flag==0){
 	   	        if(respsoma[i+1]!=0){
@@ -62,6 +63,39 @@ public class NumeroMuitoGrande{
 	        else 
 	            System.out.print(respsoma[i]);
 	  }
+        System.out.println(" ");
+    }
+    
+    public void multiplicaNumero(){
+        int i, j, pos, vai, aux;
+        for (i = 0; i < 30; i++) {
+            respmulti[i] = 0;
+        }
+        for (i=29; i>=0; i--){
+            vai=0;
+            pos = i;
+            j = 29;
+            while (j >= 0 && pos >= 0) {
+                respmulti[pos] += (((vetor1[i] * vetor2[j]) + vai) % 10);
+                vai = (((vetor1[i] * vetor2[j])+vai) / 10);
+                pos--;
+                j--;
+            }
+        }
+        int vai2=0;
+        for (i=29;i>=0;i--){
+            respmulti[i]=((respmulti[i] + vai2) % 10);
+            vai2 = (respmulti[i] / 10);
+        }
+        System.out.print("Multiplicação: ");
+        i=0;
+        while (respmulti[i] == 0) {
+            i++;
+        }
+        for (; i <=29; i++) {
+            System.out.print(respmulti[i]);
+        }
+        System.out.println(" ");
     }
     
     public static void main (String [] args){
@@ -69,5 +103,6 @@ public class NumeroMuitoGrande{
         big.leNumero();
         big.converteNumero();
         big.somaNumero();
+        big.multiplicaNumero();
     }  
 }
